@@ -75,7 +75,6 @@
         margin: 0;
         padding: 0;
         background: darken($color: $primary-color, $amount: 5);
-        // background: darken($color: $secondary-color, $amount: 5);
         transform: translate3d(600px, -100%, 0);
         @include easeOut;
 
@@ -85,10 +84,11 @@
         }
 
         .portrait{
-            width: 250px;
-            height: 250px;
+            width: 230px;
+            height: 230px;
             object-fit: fill;
-            background: $portrait-image;
+            background-image: $portrait-image;
+            background-repeat: no-repeat;
             border-radius: 50%;
             border: solid 3px $secondary-color;
         }
@@ -96,6 +96,7 @@
 
     .nav-item {
         transform: translate3d(0, 100%, 0);
+        align-items: center;
         @include easeOut;
 
         &.show{
