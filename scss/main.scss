@@ -71,5 +71,58 @@ main {
     }
   }
 }
+
+.about-info {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+  'bioimage bio bio'
+  'interest-1 interest-2 interest-3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-img{
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  .bio{
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  
+  .interest-1{
+    grid-area: interest-1;
+  }
+  
+  .interest-2{
+    grid-area: interest-2;
+  }
+  
+  .interest-3{
+    grid-area: interest-3;
+  }
+  
+  .interests{
+    background: lighten($primary-color, 5);
+    padding: 5rem;
+    border-top: $secondary-color 5px solid;
+    border-bottom: $secondary-color 5px solid;
+    .title{
+      color: $secondary-color;
+    }
+  }
+}
+
+#main-footer{
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+  width: 100%;
+}
 //  todo-list
 // opening the websites linkes in new tabs

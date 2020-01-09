@@ -48,6 +48,16 @@
              height: 150px;
          }
      }
+
+     div.about-info {
+         grid-template-areas:
+         'bioimage'
+         'bio'
+         'interest-1'
+         'interest-2'
+         'interest-3';
+         grid-template-columns: 1fr;
+     }
 }
 
 @include mediaSm{

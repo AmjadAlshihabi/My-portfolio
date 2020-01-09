@@ -3,6 +3,7 @@
   z-index: 3;
   margin-top: 35px;
   margin-left: 35px;
+  text-align: right;
   width: 28px;
   cursor: pointer;
   transition: all 0.5s ease-out; }
@@ -128,7 +129,10 @@
       background-image: url(../img/portrait-small.jpg);
       background-repeat: no-repeat;
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  div.about-info {
+    grid-template-areas: 'bioimage' 'bio' 'interest-1' 'interest-2' 'interest-3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -199,3 +203,40 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'interest-1 interest-2 interest-3';
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-img {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #1abceec4 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .interest-1 {
+    grid-area: interest-1; }
+  .about-info .interest-2 {
+    grid-area: interest-2; }
+  .about-info .interest-3 {
+    grid-area: interest-3; }
+  .about-info .interests {
+    background: #515151;
+    padding: 5rem;
+    border-top: #1abceec4 5px solid;
+    border-bottom: #1abceec4 5px solid; }
+    .about-info .interests .title {
+      color: #1abceec4; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: set-text-color(#444);
+  height: 60px;
+  width: 100%; }
