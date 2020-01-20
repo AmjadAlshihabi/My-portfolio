@@ -29,7 +29,9 @@
   top: 0;
   width: 100%;
   opacity: 0.9;
-  visibility: hidden; }
+  visibility: hidden;
+  height: 50px;
+  width: 100%; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
@@ -139,7 +141,7 @@
       width: 150px;
       height: 150px; }
   div.about-info {
-    grid-template-areas: 'bioimage' 'bio' 'interest-1' 'interest-2' 'interest-3';
+    grid-template-areas: 'bioimage' 'bio' 'work-section' 'work-1' 'work-2' 'work-3' 'education-section' 'education-1' 'education-2' 'education-3';
     grid-template-columns: 1fr; }
   div.projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -176,16 +178,19 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   font-weight: 400; }
   h1.lg-heading,
   h2.lg-heading,
-  h3.lg-heading {
+  h3.lg-heading,
+  h4.lg-heading {
     font-size: 6rem; }
   h1.sm-heading,
   h2.sm-heading,
-  h3.sm-heading {
+  h3.sm-heading,
+  h4.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(71, 71, 71, 0.5); }
@@ -196,14 +201,18 @@ a {
 
 header {
   position: fixed;
-  z-index: 2; }
+  z-index: 2;
+  height: 85px;
+  width: 100%;
+  background: #2b2b2b; }
 
 .text-secondary {
   color: #1abceec4; }
 
 main {
   padding: 4rem;
-  height: 100%; }
+  height: 100%;
+  margin-bottom: -60px; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -221,8 +230,8 @@ main {
   margin-right: 10px;
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'interest-1 interest-2 interest-3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio bio' 'work-section work-section work-section' 'work-1 work-2 work-3' 'education-section education-section education-section' 'education-1 education-2 education-3';
+  grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-img {
     grid-area: bioimage;
     margin: auto;
@@ -231,19 +240,46 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .interest-1 {
-    grid-area: interest-1; }
-  .about-info .interest-2 {
-    grid-area: interest-2; }
-  .about-info .interest-3 {
-    grid-area: interest-3; }
-  .about-info .interests {
+  .about-info .work-section {
+    color: #fff;
+    padding-top: 25px;
+    text-align: center;
+    grid-area: work-section; }
+  .about-info .work-1 {
+    grid-area: work-1; }
+  .about-info .work-2 {
+    grid-area: work-2; }
+  .about-info .work-3 {
+    grid-area: work-3; }
+  .about-info .work {
     background: #515151;
-    padding: 5rem;
+    padding: 2rem;
+    text-align: center;
     border-top: #1abceec4 5px solid;
     border-bottom: #1abceec4 5px solid; }
-    .about-info .interests .title {
-      color: #1abceec4; }
+    .about-info .work .text-secondary {
+      padding-bottom: 1.5rem;
+      font-size: 1.5rem; }
+  .about-info .education-section {
+    padding-top: 25px;
+    color: #fff;
+    text-align: center;
+    grid-area: education-section; }
+  .about-info .education-1 {
+    grid-area: education-1; }
+  .about-info .education-2 {
+    grid-area: education-2; }
+  .about-info .education-3 {
+    grid-area: education-3; }
+  .about-info .education {
+    background: #515151;
+    padding: 2rem;
+    text-align: center;
+    border-top: #1abceec4 5px solid;
+    border-bottom: #1abceec4 5px solid; }
+    .about-info .education .text-secondary {
+      padding-bottom: 1.5rem;
+      font-size: 1.5rem; }
 
 .projects {
   display: grid;
@@ -256,6 +292,15 @@ main {
       opacity: 0.5;
       border-color: #1abceec4;
       transition: all 0.5s ease-out; }
+  .projects .discription {
+    background-color: #515151;
+    border-bottom: #1abceec4 5px solid;
+    border-top: #1abceec4 5px solid;
+    height: 170px;
+    text-align: center;
+    padding: 1rem; }
+    .projects .discription .title {
+      color: #1abceec4; }
 
 .btn, .btn-light, .btn-dark {
   display: block;
@@ -264,13 +309,13 @@ main {
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
     background: #1abceec4;
-    color: #000; }
+    color: setTextColor #1abceec4; }
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: initial;
   margin-top: 1rem; }
   .boxes div {
     font-size: 2rem;
@@ -294,7 +339,9 @@ main {
   color: #fff; }
 
 #main-footer {
+  position: fixed;
   text-align: center;
+  bottom: 0;
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;

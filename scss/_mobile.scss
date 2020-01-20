@@ -57,9 +57,14 @@
          grid-template-areas:
          'bioimage'
          'bio'
-         'interest-1'
-         'interest-2'
-         'interest-3';
+         'work-section'
+         'work-1'
+         'work-2'
+         'work-3'
+         'education-section'
+         'education-1'
+         'education-2'
+         'education-3';
          grid-template-columns: 1fr;
      }
      div.projects{

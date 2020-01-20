@@ -42,7 +42,8 @@
     width: 100%;
     opacity: 0.9;
     visibility: hidden;
-
+    height: 50px;
+    width: 100%;
     &.show{
         visibility: visible;
     }
